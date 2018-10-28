@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionUnderView" customModule="StackInViewStackView" customModuleProvider="target">
+            <connections>
+                <outlet property="addAmountFirstBtn" destination="jDI-rb-Y5g" id="T9w-Bt-NYK"/>
+                <outlet property="addAmountSecondBtn" destination="RN9-SR-duz" id="rj2-hV-Hfd"/>
+                <outlet property="addAmountThirdBtn" destination="889-9l-t03" id="WS6-9u-fFc"/>
+                <outlet property="amountClearBtn" destination="0Kr-Gf-ACc" id="u0y-Xl-4vf"/>
+                <outlet property="amountTextField" destination="T11-FE-rGb" id="obW-cE-Cns"/>
+                <outlet property="buyBtn" destination="iaa-fc-RcV" id="sXo-0l-Csj"/>
+                <outlet property="desirePriceTitleLabel" destination="H7S-ZP-mlr" id="c46-xU-vT1"/>
+                <outlet property="forcastPriceLabel" destination="QT3-23-wmg" id="wbG-Y0-Dyd"/>
+                <outlet property="fullAmountBtn" destination="Pd3-La-6z2" id="2IB-lz-OPK"/>
+                <outlet property="halfAmountBtn" destination="qpy-6O-OA3" id="82M-Uk-EGN"/>
+                <outlet property="holdingsPriceLabel" destination="4Q9-t8-hGD" id="MdC-8j-EwV"/>
+                <outlet property="oneQuarterBtn" destination="SRK-RQ-o4Y" id="DI1-GY-AI5"/>
+                <outlet property="orderTypeSegmentedControl" destination="JBp-z3-5sc" id="k2G-C1-tXh"/>
+                <outlet property="priceTextField" destination="cXG-gO-1C9" id="ejK-YU-NEp"/>
+                <outlet property="sellBtn" destination="i9o-8r-y0a" id="Ctr-uX-0uL"/>
+                <outlet property="threeQuartersAmountBtn" destination="3Ig-jo-HWK" id="ZAv-wj-Mpt"/>
+                <outlet property="transactionAmountTitleLabel" destination="lBX-mg-DVK" id="Y4F-jO-tpn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Super View">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="355"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68K-iM-c8t">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="7s7-JJ-qJn">
+                            <rect key="frame" x="169" y="8.5" width="36" height="13"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="7s7-JJ-qJn" firstAttribute="centerX" secondItem="68K-iM-c8t" secondAttribute="centerX" id="7gn-Eb-5xT"/>
+                        <constraint firstItem="7s7-JJ-qJn" firstAttribute="centerY" secondItem="68K-iM-c8t" secondAttribute="centerY" id="MhC-bq-QJc"/>
+                        <constraint firstAttribute="height" constant="30" id="Vf0-s4-ykv"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所有JPY：¥ 123,000 　所有BTC：0.6BTC" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Q9-t8-hGD">
+                    <rect key="frame" x="144.5" y="40" width="215.5" height="13.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JBp-z3-5sc">
+                    <rect key="frame" x="15" y="68.5" width="345" height="29"/>
+                    <segments>
+                        <segment title="成行"/>
+                        <segment title="指値"/>
+                    </segments>
+                    <color key="tintColor" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                </segmentedControl>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="e4h-cg-1zS">
+                    <rect key="frame" x="50" y="106.5" width="310" height="16"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="取引数量(BTC)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBX-mg-DVK">
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.59215686270000001" green="0.61568627450000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="希望価格(JPY)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7S-ZP-mlr">
+                            <rect key="frame" x="160" y="0.0" width="150" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.59215686270000001" green="0.61568627450000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="98J-8q-HKO">
+                    <rect key="frame" x="50" y="132.5" width="310" height="38"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T11-FE-rGb">
+                            <rect key="frame" x="0.0" y="0.0" width="310" height="38"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                        </textField>
+                        <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXG-gO-1C9">
+                            <rect key="frame" x="-50" y="0.0" width="0.0" height="38"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="予想価格(取引数量 × 希望価格) : 0 円" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QT3-23-wmg">
+                    <rect key="frame" x="15" y="180.5" width="345" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.59215686270000001" green="0.61568627450000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="B9h-37-sxq">
+                    <rect key="frame" x="15" y="205" width="345" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDI-rb-Y5g">
+                            <rect key="frame" x="0.0" y="0.0" width="79" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="+1">
+                                <color key="titleColor" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RN9-SR-duz">
+                            <rect key="frame" x="89" y="0.0" width="78.5" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="+0.1">
+                                <color key="titleColor" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="889-9l-t03">
+                            <rect key="frame" x="177.5" y="0.0" width="79" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="+0.01">
+                                <color key="titleColor" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kr-Gf-ACc">
+                            <rect key="frame" x="266.5" y="0.0" width="78.5" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="クリア">
+                                <color key="titleColor" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="7fq-UI-H59"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gO0-T2-zxC">
+                    <rect key="frame" x="15" y="245" width="345" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRK-RQ-o4Y">
+                            <rect key="frame" x="0.0" y="0.0" width="79" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="25%">
+                                <color key="titleColor" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpy-6O-OA3">
+                            <rect key="frame" x="89" y="0.0" width="78.5" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="50%">
+                                <color key="titleColor" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ig-jo-HWK">
+                            <rect key="frame" x="177.5" y="0.0" width="79" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="75%">
+                                <color key="titleColor" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pd3-La-6z2">
+                            <rect key="frame" x="266.5" y="0.0" width="78.5" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="100%">
+                                <color key="titleColor" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.35294117650000001" green="0.66274509800000003" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="q2u-zA-jsi"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rim-7B-e1H">
+                    <rect key="frame" x="15" y="290" width="345" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaa-fc-RcV">
+                            <rect key="frame" x="0.0" y="0.0" width="167.5" height="50"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" title="BTCを買う">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9o-8r-y0a">
+                            <rect key="frame" x="177.5" y="0.0" width="167.5" height="50"/>
+                            <color key="backgroundColor" red="0.46274509800000002" green="0.91372549020000005" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <state key="normal" title="BTCを売る">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2eb-qd-0iL"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="98J-8q-HKO" secondAttribute="trailing" constant="15" id="GMk-Ih-mat"/>
+                <constraint firstItem="JBp-z3-5sc" firstAttribute="top" secondItem="4Q9-t8-hGD" secondAttribute="bottom" constant="15" id="Id8-TF-C6p"/>
+                <constraint firstItem="68K-iM-c8t" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Jr1-JJ-Uc4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JBp-z3-5sc" secondAttribute="trailing" constant="15" id="LVN-Rv-O0K"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gO0-T2-zxC" secondAttribute="trailing" constant="15" id="NWW-QT-wNX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rim-7B-e1H" secondAttribute="trailing" constant="15" id="QzQ-BF-cIw"/>
+                <constraint firstItem="98J-8q-HKO" firstAttribute="top" secondItem="e4h-cg-1zS" secondAttribute="bottom" constant="10" id="RhL-ZT-LAV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rim-7B-e1H" secondAttribute="bottom" constant="15" id="TMZ-kK-BcN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="e4h-cg-1zS" secondAttribute="trailing" constant="15" id="USQ-2R-Jdk"/>
+                <constraint firstItem="B9h-37-sxq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="YFt-cg-SB7"/>
+                <constraint firstItem="68K-iM-c8t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Z9c-6c-fVq"/>
+                <constraint firstItem="B9h-37-sxq" firstAttribute="top" secondItem="QT3-23-wmg" secondAttribute="bottom" constant="10" id="cGx-vL-sgV"/>
+                <constraint firstItem="rim-7B-e1H" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="cKu-Kz-mJw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="B9h-37-sxq" secondAttribute="trailing" constant="15" id="ctc-7I-HNb"/>
+                <constraint firstItem="68K-iM-c8t" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="d7t-Fy-RiP"/>
+                <constraint firstItem="e4h-cg-1zS" firstAttribute="top" secondItem="JBp-z3-5sc" secondAttribute="bottom" constant="10" id="dbk-rQ-odE"/>
+                <constraint firstItem="gO0-T2-zxC" firstAttribute="top" secondItem="B9h-37-sxq" secondAttribute="bottom" constant="10" id="dz9-6d-YLA"/>
+                <constraint firstItem="e4h-cg-1zS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="gMr-i9-RpQ" userLabel="leading + 50"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4Q9-t8-hGD" secondAttribute="trailing" constant="15" id="hmP-Ue-Q5q"/>
+                <constraint firstItem="JBp-z3-5sc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="oJY-oj-a5Q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QT3-23-wmg" secondAttribute="trailing" constant="15" id="qB5-ab-SV5"/>
+                <constraint firstItem="QT3-23-wmg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="qYA-4C-gqO"/>
+                <constraint firstItem="QT3-23-wmg" firstAttribute="top" secondItem="98J-8q-HKO" secondAttribute="bottom" constant="10" id="wDm-5h-2e9"/>
+                <constraint firstItem="gO0-T2-zxC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="xS5-Ph-o3O"/>
+                <constraint firstItem="4Q9-t8-hGD" firstAttribute="top" secondItem="68K-iM-c8t" secondAttribute="bottom" constant="10" id="xSl-Hv-YBv"/>
+                <constraint firstItem="98J-8q-HKO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="zPz-PC-BiI" userLabel="leading50"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="127.5" y="129.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow" width="36" height="13"/>
+    </resources>
+</document>
